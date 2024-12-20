@@ -28,3 +28,6 @@ jobs:
       run: |
         make dist
         dpkg-buildpackage -us -uc
+
+    - name: Run tests
+      run: make check
