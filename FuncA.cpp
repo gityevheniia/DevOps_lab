@@ -2,6 +2,10 @@
 #include <cmath>
 
 double FuncA::calculate(double x) {
-    return 0; // Повертає 0
+	double result = 0; 
+	for (int i = 1; i <= 3; ++i) { 
+		result += pow(-1, i - 1) * pow(x, i) / i;
+ 	} 
+return result; 
 }
 
