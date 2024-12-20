@@ -18,3 +18,13 @@ jobs:
 
     - name: Build project
       run: make
+
+    - name: Build tarball
+      run: |
+        ./configure
+        make dist
+
+    - name: Build Debian package
+      run: |
+        make dist
+        dpkg-buildpackage -us -uc

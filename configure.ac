@@ -1,5 +1,5 @@
 AC_INIT([main], [1.0], [bukhalo.yevheniia@lll.kpi.ua])
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([foreign])
 AC_PROG_CXX
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
