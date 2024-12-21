@@ -1,0 +1,15 @@
+upstream backend {
+    server 127.0.0.1:8081; # First HTTP server container
+    server 127.0.0.1:8082; # Second HTTP server container
+    server 127.0.0.1:8083; # Third HTTP server container
+}
+
+server {
+    listen 80;
+
+    location / {
+        proxy_pass http://backend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
