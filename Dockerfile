@@ -15,7 +15,7 @@ COPY . /app
 WORKDIR /app
 
 # Compile the server
-RUN g++ -o server server.cpp -std=c++17 -pthread
+RUN g++ -o server server.cpp -std=c++17 -pthread -static
 
 # Stage 2: Create the runtime image with a smaller base (Alpine)
 FROM alpine:latest
